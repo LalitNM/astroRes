@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>STAC|AstroData</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{%static 'css/res.css' %}">
+    </head>
+<body> 
+<div class="col-md-8 offset-md-2">
+
+    <h1>Astronomy related resources</h1>
+    <h3><a href="/admin/resources/post/add/">Add new!</a></h3>
+    <hr>
+
+    {% for post in posts %}
+    <div class="post">
+    <h2>{{ post.title }}</a></h2>
+
+    <p>{{ post.about | linebreaks|urlize }}</p>
+    </div>
+    {% endfor %}
+    
+
+</div>
+</body> 
+</html>
